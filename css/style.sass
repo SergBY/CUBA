@@ -3,6 +3,7 @@ $color_whiteGlobal: #FFFFFF
 $color_textGlobal: #505050
 $color_menuLink: #909090
 $color_menuLinkActive: #4E5665
+$color_title: #4E5665
 $color_grayLine: rgba(208, 212, 216, 0.5)
 $font_Georgia: 'Georgia', sans-serif
 $font_mainLato: 'Lato', sans-serif
@@ -23,6 +24,18 @@ body
     font-size: $fontSize_main
     line-height:  $lineHeight_main
     font-weight: 400
+
+.container
+    max-width: 1200px
+    padding: 0 15px
+    margin: 0 auto
+
+.container-content
+    max-width: 970px
+    margin: 0 auto
+
+.section-line
+    border-bottom: 1px solid $color_grayLine
 
 .header__top
     background-image: url(../images/top-bg.jpg)
@@ -90,3 +103,43 @@ body
 .menu__list-link:hover
     color: $color_menuLinkActive
     border-bottom: 4px solid $color_orangeGlobal
+
+.reason
+    padding: 80px 0 0
+
+.reason__title
+    font-family: Georgia
+    font-style: normal
+    font-weight: normal
+    font-size: 32px
+    line-height: 38px
+    text-align: center
+    color: $color_title
+    margin-bottom: 22px
+
+.reason__link
+    text-align: right
+    font-weight: bold
+    color: $color_orangeGlobal
+    margin-bottom: 36px
+
+.reason__statistics
+    display: flex
+    justify-content: space-around
+    align-items: center
+    text-align: center
+    padding-bottom: 80px
+
+.reason__statistics-num
+    margin-top: 32px
+    color: $color_title
+    font-family: Lato
+    font-weight: bold
+    font-size: 22px
+    line-height: 30px
+
+.reason__statistics-text
+    color: $color_menuLink
+    font-weight: bold
+    font-size: 14px
+    line-height: 17px
