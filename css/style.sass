@@ -1,0 +1,92 @@
+$color_orangeGlobal: #ECB84C
+$color_whiteGlobal: #FFFFFF
+$color_textGlobal: #505050
+$color_menuLink: #909090
+$color_menuLinkActive: #4E5665
+$color_grayLine: rgba(208, 212, 216, 0.5)
+$font_Georgia: 'Georgia', sans-serif
+$font_mainLato: 'Lato', sans-serif
+$fontSize_main: 16px
+$lineHeight_main: 28px
+
+*, *::after, *::before
+    box-sizing: border-box   
+
+a
+    text-decoration: none
+    color: inherit
+    display: inline-block
+
+body
+    color: $color_textGlobal
+    font-family: $font_mainLato
+    font-size: $fontSize_main
+    line-height:  $lineHeight_main
+    font-weight: 400
+
+.header__top
+    background-image: url(../images/top-bg.jpg)
+    height: 100vh
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+    padding: 40px
+    //background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.6) 100%)
+
+.header__top-inner
+    border: 2px solid $color_orangeGlobal
+    border-bottom: none
+    display: flex
+    flex-direction: column
+    height: 100%
+    color: $color_whiteGlobal
+    font-family: Georgia
+
+.header__title
+    font-weight: bold
+    font-size: 200px
+    line-height: 227px
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5)
+    margin: auto
+    font-weight: bold
+
+.header__text
+    font-weight: normal
+    font-size: 24px
+    line-height: 27px
+    text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.5)
+    display: flex
+    white-space: nowrap
+    align-items: center
+    margin-bottom: -12px 
+    &::before,
+    &::after
+        content: ""
+        border-top: 2px solid $color_orangeGlobal
+        width: 100%
+    &::after
+        margin-left: 30px
+    &::before
+        margin-right: 30px
+
+.menu
+    border-bottom: 1px solid $color_grayLine
+
+.menu__list
+    display: flex
+    align-items: center
+    justify-content: center
+
+.menu__list-link
+    padding: 24px 10px 20px
+    color: $color_menuLink
+    font-weight: bold
+    font-size: 14px
+    line-height: 19px
+    margin: 6px 0px
+    border-bottom: 4px solid transparent
+    transition: all 0.35s
+
+.menu__list-link:hover
+    color: $color_menuLinkActive
+    border-bottom: 4px solid $color_orangeGlobal
