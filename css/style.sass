@@ -38,7 +38,6 @@ body
     border-bottom: 1px solid $color_grayLine
 
 .header__top
-    background-image: url(../images/top-bg.jpg)
     height: 100vh
     background-repeat: no-repeat
     background-size: cover
@@ -107,17 +106,19 @@ body
 .reason
     padding: 80px 0 0
 
-.reason__title
+.title
     font-family: Georgia
-    font-style: normal
     font-weight: normal
     font-size: 32px
     line-height: 38px
     text-align: center
     color: $color_title
-    margin-bottom: 22px
 
-.reason__link
+.reason__title
+    margin-bottom: 20px
+
+.reason__link,
+.about__link
     text-align: right
     font-weight: bold
     color: $color_orangeGlobal
@@ -143,3 +144,54 @@ body
     font-weight: bold
     font-size: 14px
     line-height: 17px
+
+.about
+    margin-top: 80px
+
+.about__title
+    margin-bottom: 13px
+
+.about-text
+    margin-bottom: 72px
+
+.about__item
+    margin-bottom: 100px
+    padding: 70px 0
+    background-repeat: no-repeat
+    background-position: right
+
+.about__box
+    padding: 33px 40px 18px 40px
+    background-color: #fff
+    max-width: 470px
+    position: relative
+    &::after,
+    &::before
+        content: ""
+        position: absolute
+        width: 33px
+        height: 33px
+    &::before
+        background-image: url(../images/decor-left.svg)
+        top: 19px
+        left: 19px    
+    &::after
+        border-bottom: 2px solid $color_orangeGlobal
+        border-right: 2px solid $color_orangeGlobal
+        right: 19px
+        bottom: 19px
+
+.about__box-title
+    color: $color_title
+    font-family: Georgia
+    font-weight: normal
+    font-size: 24px
+    line-height: 25px
+    margin-bottom: 20px
+
+.about__item:nth-child(odd)
+    background-position: left
+
+.about__item:nth-child(odd)
+    .about__box
+        margin-left: auto
