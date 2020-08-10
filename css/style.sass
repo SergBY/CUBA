@@ -200,6 +200,36 @@ body
     .about__box
         margin-left: auto
 
+.about__preview-title
+    margin-bottom: 38px
+
+.about__preview-text
+    margin-top: 53px
+    margin-bottom: 80px    
+
+.abaut__images-box
+    padding-top: 73px
+
+.about__dot
+    width: 32px
+    height: 32px
+    border-radius: 50%
+    background-color: rgba(236, 184, 76, .75)            
+    position: relative
+    cursor: pointer
+    &::after
+        content: ""
+        position: absolute
+        width: 10px
+        height: 10px
+        border-radius: 50%
+        background-color: $color_orangeGlobal
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        
+
+
 .photo
     padding: 80px 0
 
@@ -225,6 +255,7 @@ body
 .photo__slider
     max-width: 640px
     margin: 0 auto
+    filter: drop-shadow(0px 2px 24px rgba(0, 0, 0, 0.3))
 
 .slick-arrow
     border: none
