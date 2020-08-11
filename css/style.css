@@ -258,6 +258,7 @@ body {
 
 .abaut__images-box {
   padding-top: 73px;
+  position: relative;
 }
 
 .about__dot {
@@ -265,8 +266,19 @@ body {
   height: 32px;
   border-radius: 50%;
   background-color: rgba(236, 184, 76, 0.75);
-  position: relative;
+  position: absolute;
   cursor: pointer;
+}
+
+.about__dot::before {
+  content: "";
+  background-image: url(../images/line.svg);
+  width: 244px;
+  height: 122px;
+  position: absolute;
+  top: -112px;
+  left: 20px;
+  display: none;
 }
 
 .about__dot::after {
@@ -280,6 +292,46 @@ body {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+.about__dot:hover::before {
+  display: block;
+}
+
+.about__dot:hover .about__dot-text {
+  display: block;
+}
+
+.about__dot-text {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 28px;
+  color: #505050;
+  position: absolute;
+  top: -140px;
+  left: 150px;
+  white-space: nowrap;
+  display: none;
+}
+
+.about__dot--1 {
+  top: 190px;
+  left: 148px;
+}
+
+.about__dot--2 {
+  top: 188px;
+  left: 495px;
+}
+
+.about__dot--3 {
+  top: 147px;
+  right: 374px;
+}
+
+.about__dot--4 {
+  bottom: 28px;
+  right: 299px;
 }
 
 .photo {
